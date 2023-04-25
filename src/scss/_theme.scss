@@ -15,15 +15,6 @@ h2,.h2 {
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
-  min-width: 320px;
-  font-family: $main-font;
-  line-height: 1.2;
-  background-color: $bg-clr;
-  color: $txt-clr;
-}
-
 ul,
 ol,
 dl {
@@ -54,6 +45,19 @@ a {
       color: $first-clr;
     }
   }
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: $main-font;
+  line-height: 1.2;
+  background-color: $bg-clr;
+  color: $txt-clr;
+}
+
+main {
+  min-height: 100vh;
 }
 
 .container {
