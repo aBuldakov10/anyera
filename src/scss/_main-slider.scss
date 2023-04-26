@@ -54,6 +54,7 @@
   margin-bottom: 25px;
   font-size: 28px;
   font-weight: $regular;
+  transition: $transition-6;
 
   @media (min-width: $xs+px) {
     font-size: 36px;
@@ -72,6 +73,7 @@
 
 .desc {
   max-width: 570px;
+  transition: $transition-6;
 }
 
 button {
@@ -88,6 +90,8 @@ button {
 }
 
 .speed-block {
+  transition: $transition-6;
+
   @media (min-width: $md+px) {
     display: flex;
     flex-direction: row-reverse;
@@ -106,6 +110,10 @@ button {
       flex-direction: column;
       flex-basis: 135px;
       gap: 50px;
+    }
+
+    & .active:after {
+      opacity: 1;
     }
   }
 
@@ -126,5 +134,48 @@ button {
   @media (min-width: $md+px) {
     max-width: 495px;
     align-self: center;
+  }
+}
+
+.cta__lvl-1:after {
+  background: $first-clr;
+}
+
+.cta__lvl-2:after {
+  background: $third-clr;
+}
+
+.cta__lvl-3:after {
+  background: $second-clr;
+}
+
+.swiper-slide-next .title,
+.swiper-slide-next .desc,
+.swiper-slide-prev .title,
+.swiper-slide-prev .desc {
+  opacity: 0;
+}
+
+.swiper-slide-next {
+  & .title {
+    transform: translateY(100px);
+  }
+
+  & .desc {
+    transform: translateY(-40px);
+  }
+}
+
+.swiper-slide-prev {
+  & .speed-block {
+    transform: translateY(70px);
+  }
+
+  & .title {
+    transform: translateY(50px);
+  }
+
+  & .desc {
+    transform: translateY(-30px);
   }
 }

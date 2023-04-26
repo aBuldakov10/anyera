@@ -39,4 +39,10 @@ $(document).on('DOMContentLoaded', () => {
   $('.js-btn-prev').on('click', function () {
     $('.main-slider__prev').click();
   });
+
+  /*** Change speed level ***/
+  $('.js-speed-lvl').on('click', function () {
+    $('.js-speed-lvl').removeClass('active');
+    $(this).addClass('active');
+  });
 });
