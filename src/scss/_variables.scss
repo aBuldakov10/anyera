@@ -8,8 +8,12 @@ $semi-bold: 600;
 $bold: 700;
 
 // Breakpoints
+$xs: 375;
+$sm: 576;
 $md: 768;
+$max-md: 767;
 $xl: 1200;
+$max-xl: 1199;
 
 // Color
 $bg-clr: #252424;
@@ -24,3 +28,5 @@ $border-clr: #ffe9f6;
 // Other
 $transition-6: .6s ease-out;
 $transition-4: .4s ease-in;
+$btn-radius-20: 20px;
+$btn-radius-30: 30px;

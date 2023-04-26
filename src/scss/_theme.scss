@@ -3,6 +3,10 @@ h2, .h2, p {
   margin-top: 0;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 h2,.h2 {
   font-size: 48px;
   margin-bottom: 1em;
@@ -47,6 +51,11 @@ a {
   }
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 body {
   min-height: 100vh;
   min-width: 320px;
@@ -57,11 +66,118 @@ body {
 }
 
 main {
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 150px;
   min-height: 100vh;
+
+  @media (min-width: $sm+px) {
+    padding-top: 160px;
+  }
+
+  @media (min-width: $md+px) {
+    padding-top: 215px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
   max-width: 1300px;
+
+  @media (min-width: $xs+px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+// Buttons
+.btn {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+  cursor: pointer;
+  transition: $transition-4;
+
+  &-bg {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    opacity: 0;
+    background: linear-gradient(93.71deg, #7a0bc0 13.27%, #fa58b6 101.64%);
+    transition: $transition-4;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+}
+
+.btn-primary {
+  border: 0;
+  background: linear-gradient(93.71deg, #7a0bc0 13.27%, #fa58b6 101.64%);
+
+  &:after {
+    background: linear-gradient(93.71deg, #7a0bc0 -7.46%, #fa58b6 65.02%, #3858c7 106.98%);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 9px 4px 0 rgba(0, 0, 0, .25);
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $max-md+px) {
+    margin: 0 auto;
+  }
+}
+
+.btn-secondary {
+  @media (max-width: $max-md+px) {
+    margin: 0 auto;
+  }
+}
+
+.btn-lg {
+  max-width: 300px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: $bold;
+  border-radius: $btn-radius-30;
+  text-transform: uppercase;
+}
+
+.btn-sm {
+  max-width: 135px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: $semi-bold;
+  border-radius: $btn-radius-20;
+  text-transform: capitalize;
+
+  @media (min-width: $xs+px) {
+    font-size: 18px;
+  }
 }

@@ -1,0 +1,130 @@
+.main-slider {
+  &__item {
+    @media (min-width: $md+px) {
+      display: grid;
+      grid-template-areas: "text" "button" "speed-block";
+    }
+
+    @media (min-width: $xl+px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 70% 30%;
+      gap: 0 20px;
+      align-items: center;
+      justify-items: start;
+      grid-template-areas: "text speed-block" "button speed-block";
+    }
+
+    & .btn-lg {
+      @media (min-width: $md+px) {
+        align-self: start;
+      }
+    }
+
+    &--gift {
+      @media (min-width: $md+px) and (max-width: $max-xl+px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "text speed-block" "button speed-block";
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.main-slider__text {
+  margin-bottom: 45px;
+
+  @media (min-width: $md+px) {
+    margin-bottom: 40px;
+    grid-area: text;
+    align-self: end;
+  }
+
+  @media (min-width: $xl+px) {
+    margin-bottom: 35px;
+  }
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: $regular;
+
+  @media (min-width: $xs+px) {
+    font-size: 36px;
+  }
+
+  @media (min-width: $md+px) {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+
+  @media (min-width: $xl+px) {
+    margin-bottom: 35px;
+    font-size: 48px;
+  }
+}
+
+.desc {
+  max-width: 570px;
+}
+
+button {
+  @media (min-width: $md+px) {
+    grid-area: button;
+  }
+}
+
+.speed-block,
+.second-slider-block {
+  @media (min-width: $md+px) {
+    grid-area: speed-block;
+  }
+}
+
+.speed-block {
+  @media (min-width: $md+px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: $xl+px) {
+    width: 100%;
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    @media (min-width: $md+px) {
+      flex-direction: column;
+      flex-basis: 135px;
+      gap: 50px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto 25px;
+    max-width: 370px;
+
+    @media (min-width: $md+px) {
+      margin: 0;
+    }
+  }
+}
+
+.second-slider-block {
+  margin: 0 auto;
+  max-width: 316px;
+
+  @media (min-width: $md+px) {
+    max-width: 495px;
+    align-self: center;
+  }
+}
