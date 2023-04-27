@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Anyera</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:url" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link type="text/css" href="css/main.css" rel="stylesheet">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <nav class="header__nav">
+      <div class="js-header-burger header__nav-burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" viewBox="0 0 33 22" fill="none">
+          <path d="M0 22H33V18.3333H0V22ZM0 12.8333H33V9.16667H0V12.8333ZM0 0V3.66667H33V0H0Z" fill="currentColor"/>
+        </svg>
+      </div>
+  
+      <div class="menu-wrapper">
+        <div class="header__nav-menu menu">
+          <div class="js-menu-close menu__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path
+                  d="M25.8334 2.75163L23.2484 0.166626L13.0001 10.415L2.75175 0.166626L0.166748 2.75163L10.4151 13L0.166748 23.2483L2.75175 25.8333L13.0001 15.585L23.2484 25.8333L25.8334 23.2483L15.5851 13L25.8334 2.75163Z"
+                  fill="currentColor"/>
+            </svg>
+          </div>
+  
+          <ul class="menu__list">
+            <li>
+              <div class="menu__list-item">
+                <a href="/" class="menu__list-link">Menu 1</a>
+                <span>GO</span>
+              </div>
+            </li>
+  
+            <li>
+              <div class="menu__list-item">
+                <a href="/" class="menu__list-link">Menu 2</a>
+                <span>go</span>
+              </div>
+            </li>
+  
+            <li>
+              <div class="menu__list-item">
+                <a href="/" class="menu__list-link">Menu 3</a>
+                <span>go</span>
+              </div>
+            </li>
+  
+            <li>
+              <div class="menu__list-item">
+                <a href="/" class="menu__list-link">Menu 4</a>
+                <span>go</span>
+              </div>
+            </li>
+          </ul>
+      
+          <div class="menu__phone">
+            <a href="tel:8 800 000 00 00">8 800 000 00 00</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="top-decor">top decor element</div>
+
+  <div class="content">
+    <div class="js-slider main-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="main-slider__item">
+              <div class="main-slider__text">
+                <h2 class="title">Bibendum neque egestas congue</h2>
+                <p class="desc">lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est
+                  pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat</p>
+              </div>
+              
+              <div class="speed-block">
+                <div class="speed-block__cta cta">
+                  <button class="js-speed-lvl btn btn-sm cta__lvl-1 active" data-btn-lvl="1">
+                    <span class="btn-bg">level 1</span>
+                  </button>
+                  
+                  <button class="js-speed-lvl btn btn-sm cta__lvl-2" data-btn-lvl="2">
+                    <span class="btn-bg">level 2</span>
+                  </button>
+                  
+                  <button class="js-speed-lvl btn btn-sm cta__lvl-3" data-btn-lvl="3">
+                    <span class="btn-bg">level 3</span>
+                  </button>
+                </div>
+      
+                <div class="speed-block__image speedometer">
+                  <svg viewBox="0 0 100 100" class="speedometer__dash">
+                    <path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90" fill-opacity="0"></path>
+                  </svg>
+                  
+                  <div class="speedometer__lvl" data-lvl="1">
+                    <img src="img/lvl-1.png" class="speedometer__lvl-image-1 hidden" alt="lvl-1">
+                    <img src="img/lvl-2.png" class="speedometer__lvl-image-2 hidden" alt="lvl-2">
+                    <img src="img/lvl-3.png" class="speedometer__lvl-image-3 hidden" alt="lvl-3">
+      
+                    <div class="speedometer__arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="213" viewBox="0 0 11 213" fill="none">
+                        <path
+                            d="M4.21896 124.596H7.1917V110.011L10.2095 107.496V6.66261L5.68281 1.13L1.20117 6.66261V107.496L4.21896 110.011V124.596Z"
+                            fill="white"/>
+                        <path d="M3.21303 124.596V198.532H8.24267V124.596H7.1917H4.21896H3.21303Z" fill="white"/>
+                        <path
+                            d="M8.24267 198.532H3.21303L1.20117 201.55V209.597L3.21303 212.112H8.24267L10.2545 209.597V201.55L8.24267 198.532Z"
+                            fill="white"/>
+                        <path
+                            d="M3.21303 198.532V124.596M3.21303 198.532H8.24267M3.21303 198.532L1.20117 201.55V209.597L3.21303 212.112H8.24267L10.2545 209.597V201.55L8.24267 198.532M3.21303 124.596H8.24267M3.21303 124.596H4.21896M8.24267 124.596V198.532M8.24267 124.596H7.1917M4.21896 124.596V110.011L1.20117 107.496V6.66261L5.68281 1.13L10.2095 6.66261V107.496L7.1917 110.011V124.596M4.21896 124.596H7.1917"
+                            stroke="white" stroke-width="1.00593"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <button class="js-btn-next btn btn-lg btn-primary">
+                <span class="btn-bg">go</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="main-slider__item main-slider__item--gift">
+              <div class="main-slider__text">
+                <h2 class="title">PageMaker including versions of Lorem Ipsum.</h2>
+                <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+                  of Letraset sheets containing.</p>
+              </div>
+              
+              <div class="second-slider-block gift-slider-wrapper">
+                <div class="js-gift-slider gift-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gift-slider__image">
+                        <img src="img/gift-1.png" alt="gift-1">
+                      </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                      <div class="gift-slider__image">
+                        <img src="img/gift-2.png" alt="gift-2">
+                      </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                      <div class="gift-slider__image">
+                        <img src="img/gift-3.png" alt="gift-3">
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="swiper-button-prev gift-slider__prev"></div>
+                  <div class="swiper-button-next gift-slider__next"></div>
+                </div>
+              </div>
+      
+              <button class="js-btn-prev btn btn-lg btn-secondary">
+                <span class="btn-bg">back</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-slider__prev"></div>
+      <div class="main-slider__next"></div>
+    </div>
+  </div>
+  
+  <div class="bottom-decor">bottom decor element</div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
