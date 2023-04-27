@@ -114,7 +114,31 @@ $(document).on('DOMContentLoaded', () => {
 
   /*** Change speed level ***/
   $('.js-speed-lvl').on('click', function () {
+    const thisLvl = $(this).attr('data-btn-lvl');
+    const windowWidth = $(window).width();
+    let rotateVal = '';
+    let arrowScale = '';
+
     $('.js-speed-lvl').removeClass('active');
     $(this).addClass('active');
+    $('.speedometer__lvl').attr('data-lvl', thisLvl);
+
+    if (thisLvl === '1') {
+      rotateVal = '110';
+    } else if (thisLvl === '2') {
+      rotateVal = '230';
+    } else {
+      rotateVal = '350';
+    }
+
+    if (windowWidth <= 400) {
+      arrowScale = '0.8';
+    } else if (windowWidth > 400 && windowWidth <= 440) {
+      arrowScale = '0.9';
+    } else {
+      arrowScale = '1';
+    }
+
+    $('.speedometer__arrow').css('transform', `translate(-50%, -50%) rotate(${rotateVal}deg) scale(${arrowScale})`);
   });
 });
