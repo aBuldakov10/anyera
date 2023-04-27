@@ -27,8 +27,8 @@ $(document).on('DOMContentLoaded', () => {
     speed: 800,
     allowTouchMove: false,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.main-slider__next',
+      prevEl: '.main-slider__prev',
     },
   });
 
@@ -38,6 +38,78 @@ $(document).on('DOMContentLoaded', () => {
 
   $('.js-btn-prev').on('click', function () {
     $('.main-slider__prev').click();
+  });
+
+  /*** Gift slider ***/
+  new Swiper('.js-gift-slider', {
+    speed: 0,
+    loop: true,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: '.gift-slider__next',
+      prevEl: '.gift-slider__prev',
+    },
+    on: {
+      slideNextTransitionStart: function () {
+        const slider = document.querySelector('.gift-slider');
+
+        const prevSlide = slider.querySelector('.swiper-slide-prev');
+        const prevSlideImg = prevSlide.querySelector('.gift-slider__image');
+
+        const activeSlide = slider.querySelector('.swiper-slide-active');
+        const activeSlideImg = activeSlide.querySelector('.gift-slider__image');
+
+        const timing = '300ms';
+
+        // Set prev
+        prevSlideImg.setAttribute('style', '');
+        prevSlideImg.style.setProperty('transform', 'translateX(100%)');
+
+        // Set active
+        activeSlideImg.classList.remove('animation-right', 'animation-left');
+        activeSlideImg.setAttribute('style', '');
+        activeSlideImg.classList.add('animation-right');
+        activeSlideImg.style.setProperty('transform', 'translate(100%) rotate(-90deg)');
+
+        setTimeout(() => {
+          prevSlideImg.style.setProperty('transition-duration', timing);
+          prevSlideImg.style.setProperty('transform', 'translateX(100%) rotate(90deg)');
+
+          activeSlideImg.style.setProperty('transition-duration', timing);
+          activeSlideImg.style.setProperty('transform', 'rotate(0deg)');
+        }, 0);
+      },
+
+      slidePrevTransitionStart: function () {
+        const slider = document.querySelector('.gift-slider');
+
+        const activeSlide = slider.querySelector('.swiper-slide-active');
+        const activeSlideImg = activeSlide.querySelector('.gift-slider__image');
+
+        const nextSlide = slider.querySelector('.swiper-slide-next');
+        const nextSlideImg = nextSlide.querySelector('.gift-slider__image');
+
+        const timing = '300ms';
+
+        // Set next
+        nextSlideImg.setAttribute('style', '');
+        nextSlideImg.style.setProperty('transform', 'translateX(-100%)');
+
+        // Set active
+        activeSlideImg.classList.remove('animation-right', 'animation-left');
+        activeSlideImg.setAttribute('style', '');
+        activeSlideImg.classList.add('animation-left');
+        activeSlideImg.style.setProperty('transform', 'rotate(90deg)');
+
+        setTimeout(() => {
+          nextSlideImg.style.setProperty('transition-duration', timing);
+          nextSlideImg.style.setProperty('transform', 'translateX(-100%) rotate(-90deg)');
+
+          activeSlideImg.style.setProperty('transition-duration', timing);
+          activeSlideImg.style.setProperty('transform', 'rotate(0deg)');
+        }, 0);
+      },
+    },
   });
 
   /*** Change speed level ***/

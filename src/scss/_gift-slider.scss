@@ -1,0 +1,187 @@
+.gift-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &-wrapper {
+    position: relative;
+    padding-top: 280px;
+    width: 100%;
+    background: url("../img/slider-gift-bg.png") no-repeat center;
+    background-size: contain;
+
+    @media (min-width: $sm+px) {
+      padding-top: 340px;
+    }
+
+    @media (min-width: $md+px) {
+      padding-top: 86%;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transform-origin: top right;
+    //transition: 6s ease;
+
+    & img {
+      max-width: 170px;
+
+      @media (min-width: $xs+px) {
+        max-width: 215px;
+      }
+
+      @media (min-width: $md+px) {
+        max-width: 245px;
+      }
+
+      @media (min-width: $xl+px) {
+        max-width: 385px;
+      }
+    }
+  }
+
+  &__next,
+  &__prev {
+    top: auto;
+    bottom: 35px;
+
+    &:after {
+      font-size: 26px;
+      font-weight: 600;
+      color: $first-clr;
+
+      @media (min-width: $xs+px) {
+        font-size: 32px;
+      }
+
+      @media (min-width: $lg+px) {
+        font-size: 40px;
+      }
+
+      @media (min-width: $xl+px) {
+        font-size: 52px;
+      }
+    }
+  }
+
+  &__prev {
+    left: 35px;
+
+    @media (min-width: $sm+px) {
+      left: 25px;
+      bottom: 45px;
+    }
+
+    @media (min-width: $md+px) {
+      left: 16%;
+      bottom: 12%;
+    }
+
+    @media (min-width: $lg+px) {
+      left: 17%;
+      bottom: 15%;
+    }
+
+    @media (min-width: $xl+px) {
+      left: 12%;
+    }
+  }
+
+  &__next {
+    left: 70px;
+
+    @media (min-width: $xs+px) {
+      left: 80px;
+    }
+
+    @media (min-width: $sm+px) {
+      bottom: 45px;
+    }
+
+    @media (min-width: $md+px) {
+      left: 26%;
+      bottom: 12%;
+    }
+
+    @media (min-width: $lg+px) {
+      left: 29%;
+      bottom: 15%;
+    }
+
+    @media (min-width: $xl+px) {
+      left: 26%;
+    }
+  }
+}
+
+// Slider animation
+@keyframes bounceInRight {
+  //0% {
+  //  transform: rotate(0deg);
+  //}
+  //25% {
+  //  transform: rotate(4deg);
+  //}
+  //50% {
+  //  transform: rotate(-2deg);
+  //}
+  //75% {
+  //  transform: rotate(2deg);
+  //}
+  //to {
+  //  transform: rotate(0deg);
+  //}
+
+
+  50% {
+    transform: rotate(-2deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounceInLeft {
+  //0% {
+  //  transform: rotate(0deg);
+  //}
+  //25% {
+  //  transform: rotate(-4deg);
+  //}
+  //50% {
+  //  transform: rotate(2deg);
+  //}
+  //75% {
+  //  transform: rotate(-2deg);
+  //}
+  //to {
+  //  transform: rotate(0deg);
+  //}
+
+  50% {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animation-right,
+.animation-left {
+  animation-duration: .5s;
+  animation-delay: .300s;
+}
+
+.animation-right {
+  animation-name: bounceInRight
+}
+
+.animation-left {
+  animation-name: bounceInLeft
+}
